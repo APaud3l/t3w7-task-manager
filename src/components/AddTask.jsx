@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useLocalStorage } from 'react-use';
 import { useTasks } from '../contexts/TaskContext';
 
 const AddTask = () => {
@@ -37,8 +36,7 @@ const AddTask = () => {
                 </div>
                 <div>
                     <label>Description: </label>
-                    <input 
-                    type='textarea' 
+                    <textarea  
                     name='description' 
                     value={task.description} 
                     onChange={handleChange} required />
